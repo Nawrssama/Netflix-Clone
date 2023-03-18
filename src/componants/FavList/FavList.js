@@ -27,33 +27,56 @@ function FavList() {
 
     }
 
+    const takeNewArrFromChild = (arr) => {
+        console.log("parent: ", arr);
+        setfavArr(arr);
+    }
+
     useEffect(() => {
         sendReq()
     }, [])
 
-    const [clickedMovie , setClickedMovie] = useState({})
+    const [clickedMovie, setClickedMovie] = useState({})
     const [showFlag, setShowFlag] = useState(false)
     const handleShow = () => {
         setShowFlag(true);
+
     }
 
     const [updateFlag, setupdateFlag] = useState(false)
-    const showUpdateModal = (item)=>{
+    const showUpdateModal = (item) => {
         setupdateFlag(true);
         setClickedMovie(item);
         console.log(item);
     }
 
-    const closeUpdateModal = ()=>{
+    const closeUpdateModal = () => {
         setupdateFlag(false);
-        
+
     }
 
 
-    const handleclose = (item) => {
+    const handleclose = () => {
         setShowFlag(false);
-        setClickedMovie(item);
+
     }
+
+    const [deleteFlag, setdeleteFlag] = useState(false)
+    const showDeleteModal = (item) => {
+        setdeleteFlag(true);
+        setClickedMovie(item);
+        console.log(item);
+    }
+
+    const closeDeleteModal = () => {
+        setdeleteFlag(false);
+
+    }
+
+
+
+
+
 
 
     return (
@@ -66,12 +89,18 @@ function FavList() {
                             <Card.Body>
                                 <Card.Title>{item.title}</Card.Title>
                                 <Card.Text>
+
+                                    <p>{item.release_date}</p>
                                     <p>{item.overview}</p>
+                                    <p>{item.comment}</p>
 
                                 </Card.Text>
-                                <Button variant="outline-primary" onClick={() => {handleShow(item)}}>more options</Button>{' '}
-                                {/* <Button variant="outline-success" onClick={() => {showUpdateModal(item)}}>Update</Button>{' '}
-                                <Button variant="outline-danger">Delete</Button>{' '} */}
+                                <Button variant="outline-primary" onClick={() => {
+                                    handleShow()
+                                    setClickedMovie(item)
+                                }}>more options</Button>{' '}
+                                <Button variant="outline-success" onClick={() => { showUpdateModal(item) }}>Update</Button>{' '}
+                                <Button variant="outline-danger" onClick={() => { showDeleteModal(item) }}>Delete</Button>{' '}
 
                             </Card.Body>
                         </Card>
@@ -86,7 +115,11 @@ function FavList() {
                 </Modal.Header>
                 <Modal.Body>
                     <Image src={`https://image.tmdb.org/t/p/w500/${clickedMovie.poster_path}`} width='100%'></Image>
+
                     <p>{clickedMovie.overview}</p>
+                    <p>{clickedMovie.release_date}</p>
+                    <p>{clickedMovie.comment}</p>
+
                     <div>
                         <FloatingLabel
                             controlId="floatingTextarea"
@@ -107,8 +140,8 @@ function FavList() {
                 </Modal.Footer>
             </Modal>
 
-            {/* <UpdateModal updateFlag = {updateFlag} closeUpdateModal = {closeUpdateModal} item = {clickedMovie}/> */}
-            {/* <DeleteModal /> */}
+            <UpdateModal updateFlag={updateFlag} closeUpdateModal={closeUpdateModal} item={clickedMovie} takeNewArrFromChild={takeNewArrFromChild} />
+            <DeleteModal deleteFlag={deleteFlag} closeDeleteModal={closeDeleteModal} item={clickedMovie} takeNewArrFromChild={takeNewArrFromChild} />
         </>
 
 
