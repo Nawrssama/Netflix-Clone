@@ -40,8 +40,12 @@ function ModalMovie(props) {
                 <Modal.Title>{props.clickedMovie.title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Image src={`https://image.tmdb.org/t/p/w500/${props.clickedMovie.poster_path}`} width='100%'></Image>
+                <Image src={`https://image.tmdb.org/t/p/w500${props.clickedMovie.poster_path}`} width='100%'></Image>
+                <p>{props.clickedMovie.title}</p>
+                <p>{props.clickedMovie.release_date}</p>
                 <p>{props.clickedMovie.overview}</p>
+                <p>{props.clickedMovie.comment}</p>
+
                 <div>
 
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
