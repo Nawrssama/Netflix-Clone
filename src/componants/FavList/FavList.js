@@ -84,24 +84,24 @@ function FavList() {
             <Row xs={1} md={4} className="g-4">
                 {favArr.map((item) => {
                     return <Col>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} />
+                        <Card style={{ width: '18rem' }} className="my-4">
+                            <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} />
                             <Card.Body>
                                 <Card.Title>{item.title}</Card.Title>
                                 <Card.Text>
 
                                     <p>{item.release_date}</p>
-                                    <p>{item.overview}</p>
                                     <p>{item.comment}</p>
 
                                 </Card.Text>
-                                <Button variant="outline-primary" onClick={() => {
-                                    handleShow()
-                                    setClickedMovie(item)
-                                }}>more options</Button>{' '}
-                                <Button variant="outline-success" onClick={() => { showUpdateModal(item) }}>Update</Button>{' '}
-                                <Button variant="outline-danger" onClick={() => { showDeleteModal(item) }}>Delete</Button>{' '}
-
+                                <div className="buttons">
+                                    <Button variant="outline-primary" onClick={() => {
+                                        handleShow()
+                                        setClickedMovie(item)
+                                    }}>more details</Button>{' '}
+                                    <Button variant="outline-success" onClick={() => { showUpdateModal(item) }}>Update</Button>{' '}
+                                    <Button variant="outline-danger" onClick={() => { showDeleteModal(item) }}>Delete</Button>{' '}
+                                </div>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -120,22 +120,11 @@ function FavList() {
                     <p>{clickedMovie.release_date}</p>
                     <p>{clickedMovie.comment}</p>
 
-                    <div>
-                        <FloatingLabel
-                            controlId="floatingTextarea"
-                            label="Comments"
-                            className="mb-3"
-                        >
-                            <Form.Control as="textarea" placeholder="Leave a comment here" />
-                        </FloatingLabel>
-                    </div>
+
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleclose}>
                         Close
-                    </Button>
-                    <Button variant="primary">
-                        Save Changes
                     </Button>
                 </Modal.Footer>
             </Modal>

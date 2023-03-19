@@ -1,38 +1,104 @@
 .App {
   text-align: center;
+
+  background-image: url(https://img.freepik.com/free-photo/blue-concrete-textured-wall_53876-94000.jpg?w=996&t=st=1679227584~exp=1679228184~hmac=3309356628e9fa2b9fe36c9ba1caf7f0412e795bc6431de2f28975f60c4e8bb7);
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nawrs {
+  color: rgb(255, 0, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.col {
+  display: flex;
+  justify-content: center;
+  padding: 0px 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-body {
+  align-items: center;
   display: flex;
   flex-direction: column;
+}
+
+img.card-img-top {
+  /* height: 70px; */
+  /* width: 80%; */
+  border-radius: 8%;
+}
+
+.card.card {
+  background: url(https://img.freepik.com/free-photo/grunge-cracked-wall_1194-5682.jpg?w=996&t=st=1679225876~exp=1679226476~hmac=d8f1e2b68ecb52ae1a79a958ce0acd6f7962bd55ef6cd1d23c07872bbb37c428);
+
+}
+
+button.btn.btn-primary {
+  box-shadow: 0 0 5px #001bff;
+}
+
+button.btn.btn-primary:hover {
+  box-shadow: 0 0 5px #00aaff, 0 0 25px #00aaff, 0 0 50px #00aaff, 0 0 100px #00aaff, 0 0 200px #00aaff;
+}
+
+button.btn.btn-secondary {
+  box-shadow: 0 0 5px #cd1414;
+}
+
+button.btn.btn-secondary:hover {
+  box-shadow: 0 0 5px #c82020, 0 0 25px #c82020, 0 0 50px #c82020, 0 0 100px #c82020, 0 0 200px #c82020;
+}
+
+.modal-body {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  background-image: url(https://images.wallpaperscraft.com/image/single/background_drops_light_83428_1280x720.jpg);
+}
+
+label.form-label {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-title.h5 {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  color: #e8ecff;
+}
+
+button.btn.btn-outline-primary {
+  border-radius: 50%;
+  box-shadow: 0 0 5px #001bff;
+}
+
+button.btn.btn-outline-primary:hover {
+  box-shadow: 0 0 5px #00aaff, 0 0 25px #00aaff, 0 0 50px #00aaff, 0 0 100px #00aaff, 0 0 200px #00aaff;
+}
+
+button.btn.btn-outline-success {
+  border-radius: 50%;
+  box-shadow: 0 0 5px #22ff00;
+}
+
+button.btn.btn-outline-success:hover {
+  box-shadow: 0 0 5px #00ff6e, 0 0 25px #00ff6e, 0 0 50px #00ff6e, 0 0 100px #00ff6e, 0 0 200px #00ff6e;
+}
+
+button.btn.btn-outline-danger {
+  border-radius: 50%;
+  
+  box-shadow: 0 0 5px #f30707;
+
+}
+
+button.btn.btn-outline-danger:hover {
+  box-shadow: 0 0 5px #e7230d, 0 0 25px #e7230d, 0 0 50px #e7230d, 0 0 100px #e7230d, 0 0 200px #e7230d;
+
+}
+
+.buttons{
+  gap: 1px;
 }

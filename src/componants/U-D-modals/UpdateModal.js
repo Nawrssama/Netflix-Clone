@@ -8,8 +8,6 @@ import axios from 'axios';
 
 function UpdateModal(props) {
 
-
-
     const updateMovie = async (e) => {
         e.preventDefault();
         const obj = {
@@ -24,15 +22,11 @@ function UpdateModal(props) {
         const axiosRes = await axios.put(serverURL, obj);
         console.log(axiosRes.data);
         props.closeUpdateModal();
-
         console.log(obj);
-
         //update old favorite arr
         props.takeNewArrFromChild(axiosRes.data);
 
     }
-
-
     // const [favArr, setfavArr] = useState([]);
     // const sendReq = async () => {
     //     const serverURL = `https://movies-library-production-a000.up.railway.app/mymovies`;
@@ -49,7 +43,7 @@ function UpdateModal(props) {
     // }, [])
 
     return (
-        <Modal show={props.updateFlag} onHide={props.closeUpdateModal}>
+        <Modal show={props.updateFlag} onHide={props.closeUpdateModal} className='nawrs'>
             <Modal.Header closeButton>
                 <Modal.Title>Update form</Modal.Title>
             </Modal.Header>
@@ -80,7 +74,7 @@ function UpdateModal(props) {
                         <Form.Control name='comment' type="text" placeholder="add a new comment" defaultValue={props.item.comment} />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" >
                         Submit
                     </Button>
                 </Form>

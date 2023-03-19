@@ -1,5 +1,5 @@
 import React from "react";
-import "../Footer/Footer.css";
+import '../Footer/Footer.css'
 import {FiFacebook , FiTwitter , FiInstagram} from "react-icons/fi";
 
 function Footer() {
