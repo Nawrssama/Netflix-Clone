@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './componants/Home/Home';
 import FavList from './componants/FavList/FavList';
 
+
 function App() {
   return (
     <div className="App">
