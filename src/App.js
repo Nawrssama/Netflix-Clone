@@ -23,4 +23,10 @@ function App() {
 }
 
 export default App;
-
+// 1
+// download react
+// import the routes (when work in single page not pages)
+// dounload bootstrap
+// import bootstrap
+// 4
+// import header and footer

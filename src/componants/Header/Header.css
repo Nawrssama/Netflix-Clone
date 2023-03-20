@@ -26,3 +26,10 @@
     color: #efff;
     mix-blend-mode: multiply;
 }
+
+.navbar{
+color: rgba(0, 0, 0, 0.878);
+font-size: 25px;
+background-color: #e71515;
+border-radius: 20px;
+}

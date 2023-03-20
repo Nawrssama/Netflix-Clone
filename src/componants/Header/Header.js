@@ -18,8 +18,8 @@ function Header() {
           {/* <Navbar.Brand href="#home">Netflix</Navbar.Brand> */}
 
           <Nav className="me-auto">
-            <Link to={"/"}>Home</Link>
-            <Link to={"/FavList"}>favorit list</Link>
+            <Link to={"/"} className="navbar">Home</Link>
+            <Link to={"/FavList"} className="navbar">favorit list</Link>
           </Nav>
         </Container>
       </Navbar>
@@ -28,3 +28,7 @@ function Header() {
 }
 
 export default Header;
+// 2
+// dounloead react router dom
+// import Link and navbar and container 
+// export the header to app.js

@@ -26,3 +26,6 @@ function Footer() {
 
 
 export default Footer;
+// 3
+// import the icons and react
+// export footer to app.js

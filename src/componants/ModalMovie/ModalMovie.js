@@ -18,7 +18,7 @@ function ModalMovie(props) {
     
 
     const postData = async () => {
-        await fetch('https://movies-library-production-a000.up.railway.app/addMovie', {
+        await fetch(`${process.env.REACT_APP_serverURL}/addMovie`, {
             method: 'POST',
             body: JSON.stringify({
                 title: props.clickedMovie.title,
