@@ -17,8 +17,8 @@ function UpdateModal(props) {
             overview: e.target.overview.value,
             comment: e.target.comment.value
         }
-        // console.log(props.item.id)
-        const serverURL = `https://movies-library-production-a000.up.railway.app/update/${props.item.id}`;
+   
+        const serverURL = `${process.env.REACT_APP_serverURL}/update/${props.item.id}`;
         const axiosRes = await axios.put(serverURL, obj);
         console.log(axiosRes.data);
         props.closeUpdateModal();

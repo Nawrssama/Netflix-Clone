@@ -18,7 +18,7 @@ function FavList() {
 
     const [favArr, setfavArr] = useState([]);
     const sendReq = async () => {
-        const serverURL = `https://movies-library-production-a000.up.railway.app/mymovies`;
+        const serverURL = `${process.env.REACT_APP_serverURL}/mymovies`;
         const response = await fetch(serverURL);
         const data = await response.json();
         console.log(data);

@@ -11,7 +11,7 @@ function Home() {
     const [movieArr, setMovieArr] = useState([]);
 
     const sendReq = async () => {
-        const serverURL = `https://movies-library-production-a000.up.railway.app/trending`;
+        const serverURL = `${process.env.REACT_APP_serverURL}/trending`;
         const response = await fetch(serverURL);
         const data = await response.json(); 
 
