@@ -13,6 +13,7 @@ function App() {
       <Header />
       
       <Routes>
+
         <Route path="/" element={<Home />}></Route>
         <Route path="/FavList" element={<FavList />}></Route>
 

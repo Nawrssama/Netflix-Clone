@@ -1,15 +1,3 @@
-.me-auto{
-    gap: 100px;
-    align-self: center;
-
-}
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 700px;
-    font-size: 20px;
-}
 
 .showcase{
     width: 11%;
@@ -28,8 +16,24 @@
 }
 
 .navbar{
+
+display: block;
+padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+font-size: var(--bs-nav-link-font-size);
+font-weight: var(--bs-nav-link-font-weight);
+color: var(--bs-nav-link-color);
+text-decoration: none;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 color: rgba(0, 0, 0, 0.878);
 font-size: 25px;
 background-color: #e71515;
 border-radius: 20px;
+margin-right: var(--bs-navbar-nav-link-padding-x);
+margin-left: var(--bs-navbar-nav-link-padding-x);
+padding-right: var(--bs-navbar-nav-link-padding-x);
+padding-left: var(--bs-navbar-nav-link-padding-x);
+}
+
+.nav{
+    gap: 100px;
 }
