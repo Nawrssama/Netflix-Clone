@@ -5,8 +5,6 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Modal from 'react-bootstrap/Modal';
 import Image from 'react-bootstrap/Image';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
 import UpdateModal from "../U-D-modals/UpdateModal";
 import DeleteModal from "../U-D-modals/DeleteModal";
 
